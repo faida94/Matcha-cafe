@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍵 MATCHA-LOVE CAFE</title>
+  </head>
+  <style>
+    body {
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+
+    h1,
+    h2,
+    p {
+      text-align: center;
+      font-size: 17.5px;
+      font-weight: lighter;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+    a {
+      color: #252525;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: #d9eb66;
+      color: #252525;
+      cursor: pointer;
+    }
+    h3 {
+      text-align: center;
+      font-size: 18.5px;
+      font-weight: 550;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+
+    img {
+      display: block;
+      margin: 10px auto;
+      margin-left: 50px;
+      width: 37%;
+      border-radius: 10px;
+      box-shadow: 1px 2px 3px #acaaae;
+    }
+
+    .image-with-paragraph {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .image-with-paragraph h2 {
+      margin-top: 20px;
+    }
+
+    .image-with-paragraph p {
+      display: block;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .message h2 {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .drinks {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .drinks img {
+      width: 300px;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin: 0 10px;
+      box-shadow: 1px 2px 3px #acaaae;
+    }
+
+    hr {
+      margin-top: 30px;
+      width: 20%;
+      height: 1px;
+      border: none;
+      background-color: #abb856;
+      margin: 20px auto;
+    }
+
+    button {
+      font-size: 18px;
+      background: #f5f0fe;
+      color: #050505;
+      display: block;
+      padding: 15px 20px;
+      margin-top: 20px;
+      margin: 0 auto;
+      border: 1px solid #303030;
+      border-radius: 30px;
+      box-shadow: 1px 2px 3px #acaaae;
+      transition: all 200ms ease-in-out;
+    }
+
+    button:hover {
+      background: #d9eb66;
+      color: #252525;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <h1>MATCHA-LOVE CAFE 🍵</h1>
+    <h2>Sharing <strong>MATCHA-LOVE</strong> With You</h2>
+
+    <hr />
+
+    <div class="message">
+      <h3></h3>
+    </div>
+
+    <div class="image-with-paragraph">
+      <img
+        src="https://wowitsveggie.com/wp-content/uploads/2020/04/dalgona-matcha-header.jpg"
+      />
+
+      <p>
+        <em
+          ><a
+            href="https://www.forbes.com/health/supplements/matcha-tea-health-benefits/"
+            target="_blank"
+            >"Matcha Love"</a
+          ></em
+        >
+        is harmony, balance, and connection. Our cafe, is about creating moments
+        of tranquility with every sip, and fostering meaningful connections
+        between people. Join us as we celebrate the simplicity and beauty of
+        matcha, and discover the power of love in every cup.
+      </p>
+    </div>
+
+    <h2><strong>Drink Menu</strong></h2>
+    <div class="drinks">
+      <div class="drink-item">
+        <img
+          src="https://images.ctfassets.net/v601h1fyjgba/5x572mICLA8SIK06LaRxV8/9cd38d07f301c1f62dae04246722c750/Iced_Cafe_Mocha.jpg"
+          alt="Iced-Mocha"
+        />
+        <p>Iced Mocha Latte</p>
+      </div>
+      <div class="drink-item">
+        <img
+          src="https://thefirstmess.com/wp-content/uploads/2019/06/28-11060-post/iced-peach-green-tea-3.jpg"
+          alt="Iced-Tea"
+        />
+        <p>Iced Peach Green Tea</p>
+      </div>
+      <div class="drink-item">
+        <img
+          src="https://insanelygoodrecipes.com/wp-content/uploads/2022/05/Refreshing-Homemade-Matcha-Iced-Tea-with-Soy-Milk-500x375.jpg"
+          alt="Matcha-Latte"
+        />
+        <p>Green Matcha Latte</p>
+      </div>
+    </div>
+    <br />
+    <br />
+    <button>Place your Drink Order</button>
+
+    <script>
+      function orderStatus(message) {
+        let status = document.querySelector("h3");
+        status.textContent = message;
+      }
+
+      function drinkOrder() {
+        let name = prompt(
+          "Hi 👋🏾 Welcome to Matcha-Love Cafe, What is your name?"
+        );
+        name = name.toUpperCase();
+
+        let order = prompt("What is your order ? ").toUpperCase();
+
+        if (
+          order === "ICED MOCHA LATTE" ||
+          order === "ICED PEACH GREEN TEA" ||
+          order === "GREEN MATCHA LATTE"
+        ) {
+          orderStatus(
+            `✅ Thank you, ${name} for your ${order} order. It shall be ready in 15minutes.`
+          );
+        } else {
+          orderStatus(
+            `😢 Sorry, ${name} We don't have your ${order} order. Please choose another drink from the Menu
+            below.`
+          );
+        }
+      }
+
+      let buyButton = document.querySelector("button");
+      buyButton.addEventListener("click", drinkOrder);
+    </script>
+
+    <br />
+    <br />
+    <p>Coded by Your Girl: <strong>Faida Chikwatu</strong>👩🏾‍💻</p>
+  </body>
+</html>
