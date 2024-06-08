@@ -1,0 +1,108 @@
+body {
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+
+    h1,
+    h2,
+    p {
+      text-align: center;
+      font-size: 17.5px;
+      font-weight: lighter;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+    a {
+      color: #252525;
+      text-decoration: none;
+    }
+
+    a:hover {
+      background: #d9eb66;
+      color: #252525;
+      cursor: pointer;
+    }
+    h3 {
+      text-align: center;
+      font-size: 18.5px;
+      font-weight: 550;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+    }
+
+    img {
+      display: block;
+      margin: 10px auto;
+      margin-left: 50px;
+      width: 37%;
+      border-radius: 10px;
+      box-shadow: 1px 2px 3px #acaaae;
+    }
+
+    .image-with-paragraph {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .image-with-paragraph h2 {
+      margin-top: 20px;
+    }
+
+    .image-with-paragraph p {
+      display: block;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .message h2 {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+    .drinks {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .drinks img {
+      width: 300px;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+      margin: 0 10px;
+      box-shadow: 1px 2px 3px #acaaae;
+    }
+
+    hr {
+      margin-top: 30px;
+      width: 20%;
+      height: 1px;
+      border: none;
+      background-color: #abb856;
+      margin: 20px auto;
+    }
+
+    button {
+      font-size: 18px;
+      background: #f5f0fe;
+      color: #050505;
+      display: block;
+      padding: 15px 20px;
+      margin-top: 20px;
+      margin: 0 auto;
+      border: 1px solid #303030;
+      border-radius: 30px;
+      box-shadow: 1px 2px 3px #acaaae;
+      transition: all 200ms ease-in-out;
+    }
+
+    button:hover {
+      background: #d9eb66;
+      color: #252525;
+      cursor: pointer;
+    }
